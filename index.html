@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spezialisierte Cyberversicherungen für Ärzte und Praxen - unabhängig, komprehensiv und mit bester Beratung">
+    <meta name="keywords" content="Cyberversicherung, Ärzte, Praxen, Versicherung, Cybersicherheit">
+    <meta name="author" content="Praxis Versichert">
+    <title>Cyberversicherung für Ärzte - Premium Versicherungslösungen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+        }
+
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .button-primary {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            transition: all 0.3s ease;
+        }
+
+        .button-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .testimonial-card {
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .star-rating {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white scroll-smooth">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900 bg-opacity-95 backdrop-blur-sm border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-lg accent-gradient flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-gray-900 text-lg font-bold"></i>
+                </div>
+                <span class="text-xl font-bold text-white hidden sm:inline">Praxis Versichert</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Features</a>
+                <a href="#benefits" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Vorteile</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Bewertungen</a>
+                <a href="#faq" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">FAQ</a>
+                <a href="https://praxis-versichert.de" class="button-primary px-6 py-2 rounded-lg font-semibold text-gray-900 hover:shadow-lg">Kontakt</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden text-white hover:text-cyan-400 transition-colors duration-300">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden absolute top-full left-0 right-0 bg-gray-800 border-b border-gray-700 md:hidden">
+                <div class="flex flex-col space-y-4 px-4 py-6">
+                    <a href="#features" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Features</a>
+                    <a href="#benefits" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Vorteile</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">Bewertungen</a>
+                    <a href="#faq" class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">FAQ</a>
+                    <a href="https://praxis-versichert.de" class="button-primary px-6 py-2 rounded-lg font-semibold text-gray-900 text-center hover:shadow-lg">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-40">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight">
+                        <span class="text-white">Cyberversicherung für</span>
+                        <span class="block section-title">Ärzte & Praxen</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 leading-relaxed max-w-lg">
+                        Schützen Sie Ihre medizinische Praxis mit umfassenden Cybersicherheitslösungen. Spezialisiert auf die einzigartigen Anforderungen des Gesundheitswesens.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="https://praxis-versichert.de" class="button-primary px-8 py-4 rounded-lg font-bold text-lg text-gray-900 text-center hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-2">
+                            <span>Jetzt Angebot erhalten</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <button class="px-8 py-4 rounded-lg font-bold text-lg border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300">
+                            Mehr erfahren
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 pt-8">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-cyan-400">500+</p>
+                            <p class="text-sm text-gray-400">Versicherte Praxen</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-cyan-400">24/7</p>
+                            <p class="text-sm text-gray-400">Support verfügbar</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-cyan-400">100%</p>
+                            <p class="text-sm text-gray-400">Zufriedenheit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden md:block relative">
+                    <div class="relative w-full h-96 rounded-2xl overflow-hidden glow-effect">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Medizinische Praxis mit Cybersicherheit" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">
+                    <span class="text-white">Unsere</span>
+                    <span class="block section-title">Kernstärken</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Wir bieten spezialisierte Versicherungslösungen, die genau auf die Bedürfnisse von Ärztinnen und Ärzte zugeschnitten sind
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card card-hover group p-8 rounded-2xl bg-gray-900 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                    <div class="feature-icon w-16 h-16 rounded-xl accent-gradient flex items-center justify-center mb-6 group-hover:shadow-lg">
+                        <i class="fas fa-user-tie text-gray-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Unabhängige Beratung</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Wir arbeiten unabhängig von einzelnen Versicherungsunternehmen und vergleichen die besten Angebote am Markt für Sie. Ihre Interessen stehen an erster Stelle.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card card-hover group p-8 rounded-2xl bg-gray-900 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                    <div class="feature-icon w-16 h-16 rounded-xl accent-gradient flex items-center justify-center mb-6 group-hover:shadow-lg">
+                        <i class="fas fa-globe text-gray-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Alle Gesellschaften</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Zugang zu allen führenden Versicherungsgesellschaften ermöglicht uns, Ihnen die umfassendsten Optionen und besten Konditionen anzubieten.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card card-hover group p-8 rounded-2xl bg-gray-900 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                    <div class="feature-icon w-16 h-16 rounded-xl accent-gradient flex items-center justify-center mb-6 group-hover:shadow-lg">
+                        <i class="fas fa-certificate text-gray-900 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Spezialmakler</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Als zertifizierter Spezialmakler für Cyberversicherungen im Gesundheitswesen verfügen wir über tiefgreifende Expertise und Branchenkenntnisse.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">
+                    <span class="text-white">Warum Sie uns</span>
+                    <span class="block section-title">wählen sollten</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Wir bieten nicht nur Versicherungen – wir bieten Sicherheit, Expertise und maßgeschneiderte Lösungen
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Benefit 1 -->
+                <div class="card-hover group flex gap-6 p-8 rounded-2xl bg-gray-800 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                    <div class="flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl accent-gradient flex items-center justify-center flex-shrink-0 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-chart-line text-gray-900 text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Beste Angebote auf dem Markt</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Durch unsere Verhandlungen mit führenden Versicherern erhalten Sie die wettbewerbsfähigsten Prämien und umfassendsten Leistungen. Wir vergleichen kontinuierlich die Marktangebote.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="card-hover group flex gap-6 p-8 rounded-2xl bg-gray-800 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                    <div class="flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl accent-gradient flex items-center justify-center flex-shrink-0 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-headset text-gray-900 text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Beste Beratung</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Unsere erfahrenen Berater verstehen die spezifischen Herausforderungen von Arztpraxen und bieten persönliche, kompetente Beratung für Ihre individuellen Anforderungen.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="card-hover group flex gap-6 p-8 rounded-2xl bg-gray-800 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                    <div class="flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl accent-gradient flex items-center justify-center flex-shrink-0 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-lock text-gray-900 text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Umfassender Schutz</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Von Datenverlust bis Ransomware-Attacken – wir sichern Sie gegen alle modernen Cyber-Bedrohungen ab, die speziell für medizinische Einrichtungen relevant sind.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="card-hover group flex gap-6 p-8 rounded-2xl bg-gray-800 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                    <div class="flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl accent-gradient flex items-center justify-center flex-shrink-0 group-hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-clock text-gray-900 text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Schnelle Schadensabwicklung</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Im Schadensfall unterstützen wir Sie schnell und unbürokratisch. Unser spezialisiertes Team kümmert sich um alles, damit Ihre Praxis schnell wieder läuft.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-24 bg-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 right-20 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="rounded-2xl overflow-hidden glow-effect h-96 md:h-full min-h-96">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Unser Team von Experten" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-black mb-6 tracking-tight">
+                            <span class="text-white">Über</span>
+                            <span class="block section-title">Praxis Versichert</span>
+                        </h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Praxis Versichert wurde 2018 gegründet mit der Mission, medizinische Fachkräfte vor den wachsenden Cyber-Risiken zu schützen. Unser Gründerteam erkannte früh, dass standard Versicherungslösungen nicht auf die speziellen Anforderungen von Arztpraxen zugeschnitten waren. Seitdem haben wir über 500 Praxen und Kliniken dabei geholfen, ihre digitalen Vermögenswerte zu schützen und ihre Betriebskontinuität zu sichern.
+                        </p>
+
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Unsere Kernwerte sind Transparenz, Expertise und Kundenorientierung. Wir verpflichten uns, unseren Kunden ehrliche, unabhängige Beratung zu geben und sie mit den besten verfügbaren Versicherungslösungen zu versorgen. Wir investieren kontinuierlich in die Weiterbildung unseres Teams und bleiben an der Spitze der sich ständig ändernden Cyber-Sicherheitslandschaft, um unseren Kunden den bestmöglichen Schutz zu bieten.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 pt-8">
+                        <div class="p-6 rounded-xl bg-gray-900 border border-gray-700">
+                            <p class="text-3xl font-bold text-cyan-400 mb-2">500+</p>
+                            <p class="text-sm text-gray-400">Zufriedene Kunden</p>
+                        </div>
+                        <div class="p-6 rounded-xl bg-gray-900 border border-gray-700">
+                            <p class="text-3xl font-bold text-cyan-400 mb-2">7+</p>
+                            <p class="text-sm text-gray-400">Jahre Erfahrung</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute bottom-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">
+                    <span class="text-white">Was unsere Kunden</span>
+                    <span class="block section-title">sagen</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Lesen Sie echte Bewertungen von Ärztinnen und Ärzten, die ihre Praxen mit uns geschützt haben
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-2xl bg-gray-800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-lg font-bold text-gray-900 mr-4">
+                            DR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Dr. Robert Müller</h4>
+                            <p class="text-sm text-gray-400">Zahnarzt, München</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "Die Beratung von Praxis Versichert war absolut professionell und kompetent. Sie haben mir geholfen, die richtige Versicherung für meine Zahnarztpraxis zu finden. Die Prämie ist sehr fair und der Leistungsumfang ist beeindruckend. Ich fühle mich jetzt wirklich geschützt."
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 rounded-2xl bg-gray-800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-lg font-bold text-gray-900 mr-4">
+                            SA
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Sarah Andersen</h4>
+                            <p class="text-sm text-gray-400">Allgemeinmedizinerin, Berlin</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "Nach einem kleineren Sicherheitsvorfall war ich besorgt um unsere Praxis. Die unabhängige Beratung von Praxis Versichert hat mir geholfen, eine umfassende Cybersicherheitsversicherung zu finden. Das Team war sehr unterstützend und hat alle meine Fragen beantwortet."
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 rounded-2xl bg-gray-800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-lg font-bold text-gray-900 mr-4">
+                            MK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Prof. Dr. Michael König</h4>
+                            <p class="text-sm text-gray-400">Kardiologe, Hamburg</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "Als größere Praxis mit sensiblen Patientendaten war Cybersicherheit für uns oberste Priorität. Praxis Versichert hat ein maßgeschneidertes Paket für unsere Anforderungen zusammengestellt. Der Service ist außergewöhnlich und die Expertise im Gesundheitswesen ist deutlich spürbar."
+                    </p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card p-8 rounded-2xl bg-gray-800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-lg font-bold text-gray-900 mr-4">
+                            CW
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Dr. Christine Weber</h4>
+                            <p class="text-sm text-gray-400">Chirurgin, Köln</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                        <i class="fas fa-star star-rating"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "Ich war beeindruckt von der gründlichen Analyse unserer Praxis und der maßgeschneiderten Empfehlungen. Praxis Versichert versteht wirklich die Herausforderungen im Gesundheitswesen. Ich empfehle sie gerne weiter an meine Kollegen. Großartige Arbeit!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">
+                    <span class="text-white">Häufig gestellte</span>
+                    <span class="block section-title">Fragen</span>
+                </h2>
+                <p class="text-xl text-gray-400 leading-relaxed">
+                    Finden Sie Antworten auf die wichtigsten Fragen zur Cyberversicherung für Praxen
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-gray-900 border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-gray-800 transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-white text-left">
+                            Was deckt eine Cyberversicherung für Arztpraxen ab?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-cyan-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-800 border-t border-gray-700 transition-all duration-300">
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Eine umfassende Cyberversicherung für Arztpraxen deckt typischerweise ab:
+                        </p>
+                        <ul class="text-gray-300 space-y-2 ml-4">
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Datenverlust und Datenschutzverletzungen:</strong> Kosten für Benachrichtigungen, Kreditüberwachung und Haftung</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Ransomware-Anschläge:</strong> Wiederherstellungskosten und ggf. Lösegeld (wo legal)</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Geschäftsunterbrechung:</strong> Entgangene Einnahmen während Systemausfällen</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Forensische Untersuchungen:</strong> Kosten zur Ermittlung und Beseitigung von Sicherheitsverletzungen</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Rechtliche Unterstützung:</strong> Anwaltsgebühren und Gerichtskosten</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-gray-900 border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-gray-800 transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-white text-left">
+                            Wie hoch sind die Kosten für eine Cyberversicherung?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-cyan-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-800 border-t border-gray-700 transition-all duration-300">
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Die Kosten variieren je nach Größe und Risikoprofil Ihrer Praxis. Typischerweise liegen die Prämien zwischen:
+                        </p>
+                        <ul class="text-gray-300 space-y-3 ml-4 mb-4">
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Kleine Praxen (1-5 Ärzte):</strong> €500-€1.500 pro Jahr</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Mittlere Praxen (5-20 Mitarbeiter):</strong> €1.500-€5.000 pro Jahr</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Große Praxen/Kliniken:</strong> €5.000+ pro Jahr</span></li>
+                        </ul>
+                        <p class="text-gray-300 leading-relaxed">
+                            Bei Praxis Versichert verhandeln wir die besten Preise für Sie. Kontaktieren Sie uns für ein individuelles, kostenloses Angebot ohne Verpflichtung.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-gray-900 border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-gray-800 transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-white text-left">
+                            Ist eine Cyberversicherung für kleine Praxen notwendig?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-cyan-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-800 border-t border-gray-700 transition-all duration-300">
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Ja, absolut. Kleine Praxen sind oft bevorzugte Ziele für Cyberkriminelle, da sie typischerweise weniger Sicherheitsmaßnahmen haben. Die Gründe sind:
+                        </p>
+                        <ul class="text-gray-300 space-y-3 ml-4 mb-4">
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Sensible Daten:</strong> Patientendaten sind wertvoll und müssen geschützt werden</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Regulatorische Anforderungen:</strong> DSGVO und Datenschutzgesetze gelten für alle Praxen</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Finanzielle Risiken:</strong> Ein Cyberangriff kann eine kleine Praxis existenziell bedrohen</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Geschäftskontinuität:</strong> Systemausfälle bedeuten entgangene Einnahmen</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-gray-900 border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-gray-800 transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-white text-left">
+                            Wie unterscheidet sich Praxis Versichert von anderen Maklern?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-cyan-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-800 border-t border-gray-700 transition-all duration-300">
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Wir bieten mehrere Unterscheidungsmerkmale:
+                        </p>
+                        <ul class="text-gray-300 space-y-3 ml-4 mb-4">
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Spezialisierung:</strong> Wir konzentrieren uns ausschließlich auf Cyberversicherungen im Gesundheitswesen</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Unabhängigkeit:</strong> Wir arbeiten unabhängig und vergleichen alle Gesellschaften</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Expertise:</strong> Unser Team hat tiefes Verständnis für Praxis-Anforderungen</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-cyan-400 mr-3 mt-1 flex-shrink-0"></i><span><strong>Service:</strong> Persönliche Beratung und schnelle Schadensabwicklung</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-gray-900 border border-gray-700 rounded-xl overflow-hidden transition-all duration-300">
+                    <button class="faq-question w-full px-8 py-6 flex items-center justify-between hover:bg-gray-800 transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-white text-left">
+                            Wie kann ich eine Versicherung bei Praxis Versichert abschließen?
+                        </h3>
+                        <i class="faq-icon fas fa-chevron-down text-cyan-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-8 py-6 bg-gray-800 border-t border-gray-700 transition-all duration-300">
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Der Prozess ist einfach und unkompliziert:
+                        </p>
+                        <ol class="text-gray-300 space-y-3 ml-4 mb-4">
+                            <li class="flex items-start"><span class="font-bold text-cyan-400 mr-3">1.</span><span><strong>Kontakt:</strong> Kontaktieren Sie uns per E-Mail (info@praxis-versichert.de) oder Telefon</span></li>
+                            <li class="flex items-start"><span class="font-bold text-cyan-400 mr-3">2.</span><span><strong>Beratung:</strong> Wir führen ein kostenloses Beratungsgespräch durch</span></li>
+                            <li class="flex items-start"><span class="font-bold text-cyan-400 mr-3">3.</span><span><strong>Angebot:</strong> Sie erhalten ein maßgeschneidertes Angebot</span></li>
+                            <li class="flex items-start"><span class="font-bold text-cyan-400 mr-3">4.</span><span><strong>Abschluss:</strong> Nach Ihrer Zustimmung kümmern wir uns um alle Formalitäten</span></li>
+                        </ol>
+                        <p class="text-gray-300 leading-relaxed">
+                            Die gesamte Beratung ist kostenlos und unverbindlich. Sie gehen keine Verpflichtung ein, bis Sie bereit sind.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-24 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop" alt="Cyberversicherung für Ärzte" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900 to-gray-900 opacity-85"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight leading-tight">
+                <span class="text-white">Schützen Sie Ihre Praxis</span>
+                <span class="block section-title">Noch heute</span>
+            </h2>
+
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Erhalten Sie ein kostenloses, unverbindliches Angebot von unseren Cyberversicherungs-Experten. Wir helfen Ihnen, die beste Lösung für Ihre Praxis zu finden.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://praxis-versichert.de" class="button-primary px-10 py-4 rounded-lg font-bold text-lg text-gray-900 text-center hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-2">
+                    <span>Kostenloses Angebot anfordern</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="mailto:info@praxis-versichert.de" class="px-10 py-4 rounded-lg font-bold text-lg border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 text-center">
+                    E-Mail senden
+                </a>
+            </div>
+
+            <p class="text-gray-400 mt-6 text-sm">
+                Kostenlos • Unverbindlich • Schnelle Antwort
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-lg accent-gradient flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-gray-900 text-lg font-bold"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Praxis Versichert</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Spezialisierte Cyberversicherungen für Ärzte und Praxen mit unabhängiger Beratung und besten Konditionen.
+                    </p>
+                    <div class="flex space-x-4 pt-4">
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-cyan-400 transition-colors duration-300 flex items-center justify-center text-white hover:text-gray-900">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-cyan-400 transition-colors duration-300 flex items-center justify-center text-white hover:text-gray-900">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-cyan-400 transition-colors duration-300 flex items-center justify-center text-white hover:text-gray-900">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-gray-800 hover:bg-cyan-400 transition-colors duration-300 flex items-center justify-center text-white hover:text-gray-900">
+                            <i class="fab fa-xing"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Vorteile</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Bewertungen</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6">Ressourcen</h4>
+                    <ul class="space-y-3">
+                        <li><a href="blog.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Blog</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Datenschutz</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Nutzungsbedingungen</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6">Kontakt</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-cyan-400 mt-1 flex-shrink-0"></i>
+                            <a href="mailto:info@praxis-versichert.de" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 break-all">info@praxis-versichert.de</a>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-globe text-cyan-400 mt-1 flex-shrink-0"></i>
+                            <a href="https://praxis-versichert.de" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">praxis-versichert.de</a>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-clock text-cyan-400 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">Mo-Fr: 09:00 - 17:00 Uhr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 Praxis Versichert. Alle Rechte vorbehalten.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="privacy.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Datenschutz</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Nutzungsbedingungen</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
